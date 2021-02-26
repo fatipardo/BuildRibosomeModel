@@ -1,0 +1,58 @@
+STEPS NECESSARY TO CREATE THE INDEX OF ATOMS IN THE TUNNEL
+
+#######################################################################
+### These first steps can only be done for the reference structures ###
+### Once the make-index.sh script is generated, it can be reused    ###
+### for all other systems, as we want the same residues filtered!   ###
+#######################################################################
+
+0. Create an initial reference structure. For this step I used the selection tools from VMD. 
+   This allows me to visualize the selection and see if I like it or not. The problem is that 
+   I do not get complete residues, as I am selection atoms within a certain radius. 
+
+>> The file generated is: complete_tunnel_em.pdb
+
+1. Cut the columns that contain info of chain and residue number, and sort for unique. This will
+   give us the list of residues that we want. 
+
+>> use this script do to this step: get_atom_list.sh
+
+2. Once you have the output of the list, you can use that to create the script
+   to make the index. This was all done by hand. We create one list
+   per chain, each list contains only the residue numbers. The idea is to create 
+   the commands to create the index, we can then have a separate command for each
+   chain and we go through the residue numbers in the list. 
+
+** NOTE: Here we also changed the name of the chains in the reference structure. The problem with 
+   my current OS, is that it cannot differentiate between upper and lowercase :( so I have to change
+   the name of some chains, so when we run 'gmx make_ndx' we get only the atoms for the specific chain
+   we want. 
+
+>> The chains that I changed are as follows:
+
+   F -> 1
+   h -> 2
+   I -> 3
+   W -> 4
+   V -> 5 
+   y -> 9 
+ 3LE -> ILE
+
+>> You can use this script to change the names: ./change_name_chains.sh
+
+** IMPORTANT ** YOU MUST CHANGE THE CHAIN NAME IN OTHER SYSTEMS (K13, N13, CONTROL) BEFORE RUNNING THE FINISHED SCRIPT 
+I KEPT A NEW COPY OF THE REFERENCE IN THE FILTERING DIRECTORY, SO DO NOT MESS THE ORIGINAL 
+
+>> Final script to generate index: get_atoms_for_index_alltunnel.sh
+
+3. Filter reference structure:
+
+echo '13\n q\n' | gmx trjconv -f em_nosol.pdb -s em_nosol.pdb -n index.ndx -o em_within15_tunnel.pdb
+
+4. Filter trajectories!! Notice I have previously generated these scripts for the other systems, so we only need to 
+   modify them to use the current files (new index file, change names of output files). 
+
+>> filter_within15.sh 
+
+
+That is all! Enjoy!! 
