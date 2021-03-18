@@ -7,7 +7,11 @@ In particular, it shows how we built the model for the Ribosome stalled by Ms Se
 
 The bonds we had to fix are: ...
 
-4. Some of the bond were easy to fix. By moving the atom and doing energy minimization. For other we required more work and decided to use KIC implemented in Rosetta.
+4. Some of the bond were easy to fix. By moving the atom and doing energy minimization. For other we required more work and decided to use KIC implemented in Rosetta (directory that contains reference papers: ./SecM_Remodel_Ref_Papers/ ) 
+
+The specific 'mover' used is genKIC (the same method for cyclic peptide modeling):
+https://www.rosettacommons.org/docs/latest/scripting_documentation/RosettaScripts/composite_protocols/generalized_kic/GeneralizedKIC
+
 
 We generated many models and selected the ones with the best score. The bonds we fix this way are: ... and ... 
 
