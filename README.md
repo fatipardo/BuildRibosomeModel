@@ -7,7 +7,7 @@ In particular, it shows how we built the model for the Ribosome stalled by Ms Se
 
 The bonds we had to fix are: ...
 
-4. Some of the bond were easy to fix. By moving the atom and doing energy minimization. For other we required more work and decided to use KIC implemented in Rosetta (directory that contains reference papers: ./SecM_Remodel_Ref_Papers/ ) 
+4. Some of the bond were easy to fix. By moving the atom and doing energy minimization. For other we required more work and decided to use KIC implemented in Rosetta (directory that contains reference papers: ./SecM_Remodel_Ref_Papers/ ) We defined the loops as 4 residues centered at the cis bond
 
 The specific 'mover' used is genKIC (the same method for cyclic peptide modeling):
 https://www.rosettacommons.org/docs/latest/scripting_documentation/RosettaScripts/composite_protocols/generalized_kic/GeneralizedKIC
