@@ -11,6 +11,7 @@ KLISE**ED**LFSTP**VW**ISQAQ**GI-RA**G
 3. We need to mutate the residues from the nascent peptide to match our experimental system. We did this in PyMOL. We did this residue mutation before fixing the CIS peptide bonds. A comparison between the E. coli and Ms SecM sequences is shown below: 
 
 Ec   KLISE**ED**LFSTP**VW**ISQAQ**GI-RA**G
+
 Ms SGSGGSG**SG**SGSGS**GS**GSGHA**PI-RG**S
 
 
