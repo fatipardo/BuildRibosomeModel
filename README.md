@@ -10,10 +10,13 @@ KLISE**ED**LFSTP**VW**ISQAQ**GI-RA**G
 
 3. We need to mutate the residues from the nascent peptide to match our experimental system. We did this in PyMOL. We did this residue mutation before fixing the CIS peptide bonds. A comparison between the E. coli and Ms SecM sequences is shown below: 
 
-Ec   KLISE**ED**LFSTP**VW**ISQAQ**GI-RA**G
+```
+
+Ec --KLISE**ED**LFSTP**VW**ISQAQ**GI-RA**G
 
 Ms SGSGGSG**SG**SGSGS**GS**GSGHA**PI-RG**S
 
+```
 
 4. Some were "easy" to fix. Just "flip" the oxygen of the NH (this can be done by manually changing the coordinates, but this is also how VMD "fixes" CIS bonds), followed by energy minimization to correct the geometry. For the other bonds, we decided to use KIC implemented in Rosetta (directory that contains reference papers: ./SecM_Remodel_Ref_Papers/ ) We defined the loops as 4 residues centered at the cis bond
 
