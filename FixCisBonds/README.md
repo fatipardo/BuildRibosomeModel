@@ -1,4 +1,4 @@
-## Steps to building the model of the _Escherichia coli_ ribosome stalled with the SecM arrest peptide from _Mannheimia succiniciproducens_
+## Steps to build the model of the _Escherichia coli_ ribosome stalled with the SecM arrest peptide from _Mannheimia succiniciproducens_
 
 This study investigates the mechanism by which the 8 amino acid long _Mannheimia succiniciproducens_ (_Ms_) can interact with the PTC and ribosome exit tunnel (in this case of the _E.coli_ (_Ec_) ribosome tunnel) to effect translational stalling. 
 
