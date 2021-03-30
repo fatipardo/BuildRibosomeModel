@@ -12,7 +12,10 @@ In order to have a single file, I combined the 2 pdb-like structures by using th
 **My goal from this step is to be able to successfully generate a topology file in GROMACS and be able to run energy minimization on the structure.**
 
 ```
-NOTE: In order to successfully generate a topology, your operating system needs to be able to differentiate between lower and upper case (be case sensitive). This is because the ribosome contains more than 26 chains, so you can have both chain A and chain a. If your operating system is not case sensitive, it will overwrite the files as the topology is being generated. 
+NOTE: In order to successfully generate a topology, your operating system needs to be able to differentiate between 
+lower and upper case (be case sensitive).
+This is because the ribosome contains more than 26 chains, so you can have both chain A and chain a. 
+If your operating system is not case sensitive, it will overwrite the files as the topology is being generated. 
 ```
 
 I also need to make some modifications to the structure:
