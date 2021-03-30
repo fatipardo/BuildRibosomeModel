@@ -12,7 +12,7 @@ Below is the _E coli_ SecM sequence. The _cis_ peptide bonds in 3JBU are in **bo
 
 KLISE**ED**LFSTP**VW**ISQAQ**GI-RA**G
 
-2. We also needed to substitute the _Ec_ SecM residues from the nascent peptide to _Ms_ SecM, to match our experimental system, and we used PyMOL to do this. 
+3. We also needed to substitute the _Ec_ SecM residues from the nascent peptide to _Ms_ SecM, to match our experimental system, and we used PyMOL to do this. 
 Substitution of residues was done **before** fixing the _cis_ peptide bonds. The following serves to compare  the _Ec_ and _Ms_ SecM sequences, and hopefully highlights the residues that were substituted: 
 
 ```
@@ -23,7 +23,7 @@ Ms SGSGGSG**SG**SGSGS**GS**GSGHA**PI-RG**S
 
 ```
 
-3. Some residues were "easy" to substitute. 
+4. Some residues were "easy" to substitute. 
 Just "flip" the oxygen of the NH (this can be done by manually changing the coordinates, but this is also how VMD "fixes" _cis_ bonds), followed by energy minimization to correct the geometry. 
 For the other bonds, we decided to use KIC implemented in [Rosetta](https://www.rosettacommons.org/software) (also check directory that contains reference papers: ./SecM_Remodel_Ref_Papers/). We defined the loops as 4 residues centered at the _cis_ bond. 
 
