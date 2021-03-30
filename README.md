@@ -1,4 +1,4 @@
-# Building the 70S Ribosome stalled by the _Mannheimia succiniciproducens_ arrest peptide SecM
+## Building the 70S Ribosome stalled by the _Mannheimia succiniciproducens_ arrest peptide SecM
 
 We used [3JBU](https://www.rcsb.org/structure/3JBU) as our reference structure. 
 
