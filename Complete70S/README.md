@@ -31,21 +31,24 @@ The following atoms/residues were removed because they were either not comple or
 4)  RNA chain a / residue A119
 
 
-March 11,2020
+**How to Prepare the nascent peptide??**
 
-How to Prepare the nascent peptide??
+In the directory 'Fixed CIS backbone' we explained how we modeled a new nascent chain that did not contain cis peptide bonds. Here we show how we used this new nascent chain and added it to our 70S model. 
 
-I combined the tRNA from the 3JBU crystal structure, and the new model of the nascent peptide with the 'Fixed CIS backbone' (initial structure of WT from our current MD simulations).
+To facilitate our work, we took the tRNA from 3JBU (originally chain v). We then 'cat' the tRNA and the new model of the nascent peptide with the 'Fixed CIS backbone'. 
 
-What I MUST do is to renumber the tRNA numbering for chain v!! I am working on it in the following directory: 
+Notice that you have to renumber the residues in the tRNA chain v. This is because in the original 3JBU structure, the nascent peptide (chain z) and the tRNA (chain v) are in different chains. When we combine them, we will start counting from the nascent peptide and then, add 28 to the residue ID of the tRNA.
 
-/Users/fatima/Stanford/70S/test/3jbu-pdb-bundle/Build_tRNA
+The directory 'Build_tRNA' includes the intermediate steps I followed to create the tRNA+NascentPeptide chain.
 
 The file with renumbered tRNA is: tmp_v.pdb
+And the combined files in a single structure: ChV_tRNA_WTprot.pdb 
 
-I already combined the files into a single structure: ChV_tRNA_WTprot.pdb 
+The motivation to do this separately is because it was faster to test if GROMACS could build a successful topology (many times there are typos or minor error that need to fixed when building an structure like this one). Once a successful topology is create, we can procedd to include our new tRNA+NascentPeptide chain to the complete 70S model. 
 
-Now I have to insert protein+tRNA into the complete ribosome. This should be easy because the tRNA was taken directly from 3JBU
+Combining the tRNA+NascentPeptide chain (we used the ID for chain v)  and 70S can be done in 2 simple ways. 1) edit the text file, delete the original chains 'v' and 'z' and then paste the **new** chain 'v'. This can also be done with a graphic interface using PyMOL.  
+
+Notice that this can be done easily is because the tRNA was taken directly from 3JBU, so the structures aligned perfectly. 
 
 
 
