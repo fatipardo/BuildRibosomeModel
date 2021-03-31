@@ -28,7 +28,7 @@ In addition, the following atoms/residues were removed because they were either 
 
 ### Generating the Nascent Peptide.
 
-In [FixCISbonds](https://github.com/fatipardo/BuildRibosomeModel/tree/main/FixCisBonds), we explained how we modeled a new nascent chain where the _cis_ peptide bonds were removed from the original nascent chain in 3JBU. This section details how this resulting nascent chain was added to the _E.coli_ 70S model. 
+In [FixCisbonds](https://github.com/fatipardo/BuildRibosomeModel/tree/main/FixCisBonds), we explained how we modeled a new nascent chain where the _cis_ peptide bonds were removed from the original nascent chain in 3JBU. This section details how this resulting nascent chain was added to the _E.coli_ 70S model. 
 
 We used the tRNA from 3JBU (originally chain v) and ran `cat`in bash to 'fuse' the tRNA and the new model of the nascent peptide (check repository [FixCisBonds](https://github.com/fatipardo/BuildRibosomeModel/tree/main/FixCisBonds)). 
 
