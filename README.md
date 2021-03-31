@@ -8,7 +8,7 @@ While building the model, we noticed that the backbone of the nascent chain cont
 
 The details of this process can be found in [FixCisBonds](https://github.com/fatipardo/BuildRibosomeModel/tree/main/FixCisBonds).
 
-**Note:** After fixing the cis bonds, we used the same nascent peptide for all our models. The details can be found in the Complete70S directory of this repo. 
+**Note:** After fixing the cis bonds, we used the same nascent peptide for all our models. The details can be found in [Complete70S](https://github.com/fatipardo/BuildRibosomeModel/tree/main/Complete70S). 
 
 
 
