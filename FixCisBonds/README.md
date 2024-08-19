@@ -25,7 +25,7 @@ Ms SGSGGSG**SG**SGSGS**GS**GSGHA**PI-RG**S
 
 4. Some residues were "easy" to substitute. 
 Just "flip" the oxygen of the NH (this can be done by manually changing the coordinates, but this is also how VMD "fixes" _cis_ bonds), followed by energy minimization to correct the geometry. 
-For the other bonds, we decided to use KIC implemented in [Rosetta](https://www.rosettacommons.org/software) (also check directory that contains reference papers: ./SecM_Remodel_Ref_Papers/). We defined the loops as 4 residues centered at the _cis_ bond. 
+For the other bonds, we decided to use KIC implemented in [Rosetta](https://www.rosettacommons.org/software) (10.1038/nature19791, 10.1038/nmeth0809-551, 10.1002/jcc.10416). We defined the loops as 4 residues centered at the _cis_ bond. 
 
 The specific 'mover' used was genKIC (the same method for cyclic peptide modeling):
 https://www.rosettacommons.org/docs/latest/scripting_documentation/RosettaScripts/composite_protocols/generalized_kic/GeneralizedKIC
